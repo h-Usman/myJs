@@ -223,5 +223,316 @@
 // console.log('Value of a ', a);
 // console.log('Value of b ', b);
 
+// if else statement
+// let hour = 18;
+// if(hour >= 6 && hour < 12)
+// console.log('Good morning');
+// else if(hour >= 12 && hour < 18)
+// console.log('Good afternoon');
+// else
+// console.log('Good evening');
 
 
+// switch case
+
+// let roel = 'Guest' ;
+
+// switch (roel) {
+//     case 'Guest':
+//         console.log('Guest User');
+//         break;
+    
+//     case 'Moderator':
+//         console.log('Moderator User');
+//     break;
+//     default:
+//         console.log('Unknown User');
+// }
+
+
+
+
+// for loop
+
+// for (let i = 0; i < 5; i++) {
+//     console.log(i);
+// }
+
+// for increment order 
+
+// for (let i = 1; i <=5; i++) {
+//     // console.log('hellow World', i);
+//     if (i % 2 !== 0) {
+//         console.log(i, ' is Odd');
+//     }
+// }
+
+// for reverse order
+
+// for (let i = 5; i >= 1; i--) {
+//     if (i % 2 !== 0) {
+//         console.log('Odd nuber is ', i);   
+//     }
+// }
+
+// while loop
+// let i = 1;
+// while (i <= 5) {
+//     if (i % 2 !== 0) {
+//         console.log(i);
+//     }
+//     i++
+// }
+
+
+// let i = 8;
+// while (i <= 5) {
+//     if (i % 2 !== 0) {
+//         console.log(i);
+//     }
+//     i++
+// }
+
+// for reverse while loop
+
+// let i = 5;
+// while (i >= 1) {
+//     if (i % 2 !== 0) {
+//         console.log(i);
+//     }
+//     i--
+// }
+
+// do-while
+
+// let i = 0
+// do{
+//     if (i % 2 !== 0) {
+//         console.log(i);
+//     }
+//     i++
+// }while (i <= 5);
+
+// infinite loop
+// while(true){
+//     console.log('Hello World');
+// }
+
+// do {
+//     x++
+// } while (x < 5);
+
+// for (let i = 0; i < 5; ) {
+    
+// }
+
+
+// for..in loop
+
+// const person = {
+//     name: 'Usman',
+//     age: 32
+// }
+// for (let key in person) {
+    // console.log(key); property of object
+    // console.log(key, person[key]); propert and value of object 
+    // console.log(person[key]); // value of object property
+    // console.log(person[key]); // value of object property
+// }
+
+// const colors = ['red', 'green', 'blue'];
+// for (let key in colors) {
+//     // console.log(key);
+//     console.log(key, colors[key]);    // for index and values 
+// }
+
+
+// for ...of loop
+// const colors = ['red', 'green', 'blue'];
+// for (let color of colors) {
+//     // console.log(key);
+//     console.log(color);    
+// }
+
+// max of two number 
+// let number = max(5, 8);
+// console.log(number);
+
+// function max(a, b) {
+    // if (a > b) {
+    //     return a;
+    // }
+    // else {
+    //     return b;
+    // }
+
+    // if (a > b) return a;
+    // else return b;
+    //  return (a > b) ? a : b;
+// }
+
+// kandscape or portarte
+// console.log(isLandscape(800, 500));
+
+// function isLandscape(width, height) {
+//     // return (width > height) ? true : false;
+//     return (width > height);   
+// }
+
+//FizzBuzz
+
+// const output = fizzBuzz('false')
+// console.log(output);
+
+// function fizzBuzz(input) {
+//     if (typeof input !== 'number') {
+//         return NaN;
+//     } 
+//     if ((input % 3 === 0) && (input % 5 === 0)) {
+//         return 'FizzBuzz';
+//     }
+//     if (input % 3 === 0) {
+//        return 'Fizz';
+//     }
+//     if (input % 5 === 0) {
+//         return 'Buzz';
+//     }
+//     return input;
+// }
+
+// Demerit Points
+// checkSpeed(118)
+// function checkSpeed(speed) {
+//     const speedLimit = 70;
+//     const kmPerPoint = 5;
+
+//     if(speed < speedLimit + kmPerPoint){
+//         console.log('OK');
+//         return;
+//     }
+//     let points = Math.floor((speed - speedLimit) / kmPerPoint); 
+//     if (points >= 12) {
+//         console.log('Licnced cancel');
+//     }
+//     else
+//     console.log('Points', points);
+// }
+
+
+// Even and Odd Number
+
+// showNumbers(10)
+// function showNumbers(limit) {
+//     for (let i = 0; i < limit; i++) {
+//         // if (i % 2 === 0) console.log(i, 'Even');
+//         // else console.log(i, 'ODD');
+
+//         const message = (i % 2 === 0) ? 'Even' : 'ODD'
+//         console.log(i, message);
+        
+//     }
+// }
+
+// const isActive = true;
+// const name = 'usman'; // truthly (true)
+// const name = ''; // falsy (false)
+// if (name) console.log('Hello');
+
+
+// count Truthy
+
+// const array = [0, 1, 2, 3, '', undefined, null, false, NaN, 4];
+// console.log(countTruthy(array));
+
+// function countTruthy(array) {
+//     let count = 0;
+//     for (let value of array)
+//         if (value)
+//             count++;
+//         return count;    
+// }
+
+// string property
+// const movie = {
+//     title: 'a',
+//     releasesYear: 2018,
+//     rating: 4.5,
+//     dirctor: 'b'
+// };
+// showProperties(movie);
+// function showProperties(movie) {
+//     for (const key in movie) {
+//         if (typeof movie[key] === 'string') {
+//             console.log(key, movie[key]);
+//         }
+//     }
+// }
+
+
+
+// sum of multiple of 3 and 5 
+// console.log(sum(10));
+// function sum(limit) {
+//     let sum = 0;
+
+//     for (let i = 0; i <= limit; i++) 
+//         if (i % 3 === 0 || i % 5 === 0) 
+//             sum += i;
+//     return sum;        
+// }
+
+
+// Grade Exercise
+// const marks = [90, 100, 100];
+//  1-59: F
+//  60-69: D
+//  70-79: C
+//  80-89: B
+//  90-100: A
+
+// console.log(CalculatGrade(marks));
+
+// function CalculatGrade(marks) {
+//     const average = calculateAverage(marks)
+//     if (average < 60) return 'F';
+//     if (average < 70) return 'D';
+//     if (average < 80) return 'C';
+//     if (average < 90) return 'B';
+//     return 'A';
+// }
+//  function calculateAverage(array) {
+//     let sum = 0;
+
+//     for (let value of array)
+//         sum += value;
+//     let average = sum / array.length;
+//     return average;
+//     // console.log(average);  
+//  }
+
+// stars
+// showStars(8);
+// function showStars(rows) {
+//     for (let row = 1; row <= rows; row++) {
+//         let pattern = '';
+
+//         for (let i = 0; i < row; i++)
+//             pattern += '*'; 
+
+//         console.log(pattern);
+//     }
+// }
+
+// prime number
+
+// ShowPrimes(20)
+// function ShowPrimes(limit) {
+//     for (let number = 2; number < limit; number++) 
+//         if (isPrime()) console.log(number);
+// }
+//  function isPrime(number) {
+//         for (let factor = 2; factor < number; factor++) 
+//             if (number % factor === 0) 
+//                 return false;
+//         return true;
+//  }
