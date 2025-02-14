@@ -86,7 +86,7 @@
 
 // let x = 10;
 // let y = 3;
- // arithmatic operators
+// arithmatic operators
 // console.log(x + y);
 // console.log(x - y);
 // console.log(x * y);
@@ -121,10 +121,10 @@
 // console.log(x <= 1);
 
 // Equality
-    // strict equality (same type and same value)
+// strict equality (same type and same value)
 // console.log(x === 1);
-    // 1 === 1 = true, '1' === 1 = false 
-    // lose equality (Value)
+// 1 === 1 = true, '1' === 1 = false 
+// lose equality (Value)
 // console.log(x !== 1);
 // 1== 1 = true, '1' == 1 = true, '1' == '1' = true 
 // console.log(true == 1); // true
@@ -151,7 +151,7 @@
 // let eligibleForLone = hightIncome || goodCreaditScore;
 // console.log(eligibleForLone);
 
- // logical NOT (!) reverse the value
+// logical NOT (!) reverse the value
 // let hightIncome = false;
 // let goodCreaditScore = false;
 // let eligibleForLone = hightIncome || goodCreaditScore;
@@ -174,7 +174,7 @@
 //  let defaultColor = 'blue';
 //  let currentColor = usecolor || defaultColor;
 //  console.log(currentColor);
- 
+
 
 
 // Bitwise operators
@@ -241,7 +241,7 @@
 //     case 'Guest':
 //         console.log('Guest User');
 //         break;
-    
+
 //     case 'Moderator':
 //         console.log('Moderator User');
 //     break;
@@ -323,7 +323,7 @@
 // } while (x < 5);
 
 // for (let i = 0; i < 5; ) {
-    
+
 // }
 
 
@@ -334,10 +334,10 @@
 //     age: 32
 // }
 // for (let key in person) {
-    // console.log(key); property of object
-    // console.log(key, person[key]); propert and value of object 
-    // console.log(person[key]); // value of object property
-    // console.log(person[key]); // value of object property
+// console.log(key); property of object
+// console.log(key, person[key]); propert and value of object 
+// console.log(person[key]); // value of object property
+// console.log(person[key]); // value of object property
 // }
 
 // const colors = ['red', 'green', 'blue'];
@@ -359,16 +359,16 @@
 // console.log(number);
 
 // function max(a, b) {
-    // if (a > b) {
-    //     return a;
-    // }
-    // else {
-    //     return b;
-    // }
+// if (a > b) {
+//     return a;
+// }
+// else {
+//     return b;
+// }
 
-    // if (a > b) return a;
-    // else return b;
-    //  return (a > b) ? a : b;
+// if (a > b) return a;
+// else return b;
+//  return (a > b) ? a : b;
 // }
 
 // kandscape or portarte
@@ -429,7 +429,7 @@
 
 //         const message = (i % 2 === 0) ? 'Even' : 'ODD'
 //         console.log(i, message);
-        
+
 //     }
 // }
 
@@ -536,3 +536,274 @@
 //                 return false;
 //         return true;
 //  }
+
+
+// object
+// onject oriented programing
+
+// const circle = {
+//     radius: 1,
+//     location: {
+//         x: 1,
+//         y: 1
+//     },
+//     isvisibile: true,
+//     draw: function () {
+//         console.log('Draw');
+//     }
+// }
+// circle.draw(); // method that function are in objects is called Methods now draw in circle object and this is known as method.
+
+// Factory function
+
+// function createCirlce(radius) {
+//     // const circle = {
+//     //     radius: 1,
+//     //     draw: function () {
+//     //         console.log('Draw');
+//     //     }
+//     // }
+
+//     return {
+//         // radius: 1,
+//         // radius: radius,
+//         radius,
+//         draw() {
+//             console.log('Draw');
+//         }
+//     };
+// }
+// const circle1 = createCirlce(1);
+// console.log(circle1);
+// const circle2 = createCirlce(2);
+// console.log(circle2);
+
+
+// Contractor functions
+// class Circle {
+//     constructor(radius) {
+//         this.radius = radius;
+//         this.draw = function () {
+//             console.log('Constractor Draw Func');
+//         };
+//     }
+// }
+    // function Circle (radius) {
+        
+    //     this.radius = radius;
+    //     this.draw = function () {
+    //         console.log('Constractor Draw Func');
+    //     };
+        
+    // }
+// const circle = new Circle(2);
+// console.log(circle);
+
+// console.log(circle.draw);
+
+
+// Dynamic nature of object
+
+// const circle = {
+//     radius: 1
+// }
+
+// circle.color = 'Green',
+
+// circle.draw = function() {
+//     console.log('Dynamic Circle');
+// }
+
+// delete circle.radius;
+
+// console.log(circle);
+
+// constracton property
+
+// const str = new String();
+// const bol = new Boolean();
+// const num = new Number();
+
+
+
+// const Circle10 = new Function('radius', `
+//     this.radius = radius;
+//     this.draw = function(){
+//     console.log('draw);
+//     },
+// `);
+
+// const circle = new Circle1(1);
+
+
+// function fullCircle(radius){
+//  this.radius = radius;
+//  this.draw = function (params) {
+//     console.log('draw');
+    
+//  }
+// }
+// fullCircle.call({}, 2);
+// const another = new fullCircle(1);
+
+
+// let x = 5;
+
+// let y = x; y = 5
+
+// x = 10; // x = 10
+
+// primitives are copied by the values
+
+// let x = {vaule: 5};
+
+// let y = x;
+
+// x.vaule = 10;
+
+// object are copied by the referance
+
+// let number = 10;
+
+// function increae(number) {
+//     number++;
+// }
+
+// increae(number);
+
+// console.log(number);  // output = 10
+
+// let number = 10;
+
+// function increae(number) {
+//     number++;
+// }
+
+// increae(number);
+
+// console.log(number);  // output = 10
+
+
+// let obj = {value: 10};
+
+// function increae(obj) {
+//     obj.value++;
+// }
+
+// increae(obj);
+
+// console.log(obj);  // output = 10
+
+
+
+// Enumerating properties of an object
+
+
+// const Circle = {
+//     radius: 1,
+//     deaw(){
+//         console.log('draw');
+        
+//     }
+// };
+
+
+// for in not working on object
+// for (const key in Circle) {
+//     console.log(key, Circle[key]);
+// }
+// for of for object only for array and map
+// for (const key of Circle) {
+//     console.log(key);
+    
+// }
+// here is the way for of loop for object
+// for (const key of Object.keys(Circle)) {  // for return an object the key value pare of an object
+//     console.log(key, Circle[key]);
+// }
+
+// for (const entry of Object.entries(Circle)) { // for return an array the key value pare  of an object
+//     console.log(entry);
+// }
+// if ('radius' in Circle) console.log('Yes'); // radisu is in array so 'Yes message' is appear
+
+// if ('draw' in Circle) console.log('Yes'); // radisu is in array so 'Yes message' is disappear
+
+// cloning an object
+
+// const Circle = {
+//     radius: 1,
+//     deaw(){
+//         console.log('draw');
+        
+//     }
+// };
+// clone an objecy circle object in to another object
+// const another = {...Circle} // 
+// const another = {};
+// copy circle object a=key in to another key 
+// for (const key in Circle) {
+//     another[key] = Circle[key]
+// }
+// now use modern js for copy key 
+// const another = Object.assign({}, Circle); // new approch for copy keys
+// const another = Object.assign({
+//     color: 'green' // add a property in another object
+// }, Circle); // new approch for copy keys
+
+// console.log(another);
+
+// Date()
+
+// const now = new Date();
+// console.log(now); // Fri Feb 14 2025 20:29:54 GMT+0500 (Pakistan Standard Time)
+
+// const date1 = new Date('May 11 2018 09:00');
+// console.log(date1); // Fri May 11 2018 09:00:00 GMT+0500 (Pakistan Standard Time)
+// date1.setFullYear(2025);
+// console.log(date1); // Sun May 11 2025 09:00:00 GMT+0500 (Pakistan Standard Time)
+
+
+// const date2 =  new Date(2022, 4, 11, 9);
+
+// console.log(date2); // Wed May 11 2022 09:00:00 GMT+0500 (Pakistan Standard Time)
+
+// let adderess = {
+//     street: 'a',
+//     city: 'b',
+//     zipCode: 'c'
+// };
+
+// function showAddress(adderess) {
+//     for (const key in adderess) {
+//         console.log(key, adderess[key]);
+//     }
+// }
+
+// showAddress(adderess);
+
+
+// factory function
+// camel case
+// const address = createAddress('a', 'b', 'c');
+
+// console.log(address);
+
+// function createAddress(street, city, zipCode) {
+//     return {
+//         street,
+//         city,
+//         zipCode
+//     }
+// }
+
+// constracture function 
+// capitalized case
+// const add = new Address('a', 'b', 'c');
+// console.log(add);
+
+// function Address(street, city, zipCode) {
+//     this.street = street;
+//     this.city = city;
+//     this.zipCode = zipCode;
+// }
