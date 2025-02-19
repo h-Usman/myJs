@@ -807,3 +807,417 @@
 //     this.city = city;
 //     this.zipCode = zipCode;
 // }
+
+
+
+
+
+// Arrays
+// adding an emlement
+
+// const number = [3, 4];
+// // number = [];
+// // add a numbers / number end of the array push()
+// number.push(5, 6);
+
+
+// // add a numbers / number star of the array unshift()
+// number.unshift(1, 2);
+
+// // add a numbers / number middle of the array splice()
+// number.splice(2, 0, 'a', 'b');
+// console.log(number);
+
+
+//finding element
+
+
+// const number = [1, 2, 3, 4];
+
+// console.log(number.indexOf('a'));
+
+// console.log(number.lastIndexOf(1));
+
+// console.log(number.indexOf(1) !== -1) // depricate
+// console.log(number.includes(1)); // updated
+
+// console.log(number.indexOf(1, 3)); // please clear the point indexOf(1, 2)  
+
+// const courses = [
+
+//     {
+//         id: 1,
+//         name: 'a'
+//     },
+//     {
+//         id: 2,
+//         name: 'b'
+//     },
+//     {
+//         id: 3,
+//         name: 'c'
+//     },
+//     {
+//         id: 4,
+//         name: 'd'
+//     },
+//     {
+//         id: 5,
+//         name: 'e'
+//     },
+// ];
+
+// console.log(courses.includes({id: 1, name: 'a'})); // diffrent memory diffrent location so the result is false
+// find is working for reference type
+//  const course = courses.find(function(courses){
+//     return courses.name === 'a';
+//  }); // find for object
+
+// const course = courses.findIndex(function(courses){
+//     return courses.name === 'a';
+//  }); // find index of an object // 0 object found
+
+//  console.log(course);
+ 
+ // arrow function
+
+// //  const course = courses.find( courses => courses.name === 'a');
+// const course = courses.findIndex( courses => courses.name === 'a');
+//  console.log(course);
+
+// removing element
+
+// const number = [1, 2, 3, 4];
+
+// console.log(number.pop()); // remove last number of array
+
+// console.log(number.shift()); // remove first number of array
+
+// console.log(number.splice(2, 1)); // remove diddle number / numbers of array
+// console.log(number);
+
+// emptying array
+// let number = [1, 2, 3, 4];
+// number = [];
+
+// let another = number;
+// solution 1
+// number = [];
+
+// console.log(number);
+
+// console.log(another); // number take earler copy of declarion
+
+// solution 2
+// number.length = 0;
+// console.log(another); // empty
+// console.log(number); // empty
+
+
+// solution 3
+// number.splice(0, number.length);
+
+// console.log(another); // empty
+// console.log(number); // empty
+
+// solution 4
+
+// while (number.length > 0) {
+//     number.push();
+// }
+// console.log(another); // empty
+// console.log(number); // empty
+
+
+// combining arrays
+
+// const first = [1, 2, 3];
+// const first = [{id: 1}];
+// const second = [4, 5, 6];
+// const combined = first.concat(second);
+// const combined = first.concat(second);
+// first[0].id = 10;
+// console.log(combined);
+// const slice = combined.slice(0, 5)
+// console.log(slice);
+
+// spread operators
+
+// const combined = [...first, ...second];
+// // first[0].id = 10;
+// const copy = [...combined, 'b'];
+
+// console.log(combined);
+
+// console.log(copy);
+
+// iterating an array
+
+// const numbers = [1, 2, 3];
+
+// for (const number of numbers) 
+//     console.log(number);
+
+// numbers.forEach((number, index) => console.log(index, number));
+
+// joining
+
+// const numbers = [1, 2, 3];
+
+// const joined = numbers.join(',');
+// console.log(joined);
+
+// const message = "This is my first message";
+// const parts = message.split(' '); // return and array
+//  const changeWord = parts[2].replace('my','usman')
+//  console.log(changeWord);
+//  console.log(parts);
+// const combined = parts.join('-'); // return a string
+// console.log(combined);
+ 
+// sorting arrays
+//  const numbers = [3,2,1];
+// numbers.sort();
+// console.log(numbers);
+// numbers.reverse
+// console.log(numbers);
+
+// const courses = [
+//     {id: 1, name: 'Node.js'},
+//     {id: 2, name: 'javaScript'},
+// ];
+
+// courses.sort(function (a, b) {
+
+//     if(a.name < b.name) return -1;
+//     if (a.name > b.name) return 1;
+//     return 0 
+// }); // but when name parameters in upper or lower case not match from each other
+// courses.sort(function (a, b) {
+//      const nameA = a.name.toLocaleUpperCase();
+//      const nameB = b.name.toLocaleUpperCase();
+
+//     if(nameA < nameB) return -1;
+//     if (nameA > nameB) return 1;
+//     return 0 
+// });
+// console.log(courses);
+
+// testing the element of an array
+
+// const numbers = [1,2,3,-1];
+// const allPoditive = numbers.every(function (value) {
+//     return value >= 0;
+// }); // all numbers should be positive numbers in array, and match the given criteria
+
+// const atLeastOnePositive = numbers.some(function (value) {
+//     return value >= 0;
+// }); // atLeat one number should be positive in array, and check the atleast one number match of given criteria
+
+// console.log(atLeastOnePositive);
+
+// filtering an array
+
+// const numbers = [1, 2, -1, 3];
+
+// const filtered = numbers.filter( n => n >=0 );
+// console.log(filtered);
+// const items = filtered.map(n => '<li>' + n + '</li>');
+// const html = '<ul>' + items.join('') + '</ul>'; 
+// console.log(html);
+
+// now assigning a valure and convert into object
+
+// const items = filtered.map(n => {
+//     const obj = {value: n}
+//     return obj
+// });
+// console.log(items); 
+// lets make a simple upper function
+// const items = filtered.map(n =>  ({value: n}));
+// console.log(items);
+
+
+// chaning 
+// const myNumber = numbers
+// .filter(n => n >= 0)
+// .map( n => ({value: n}))
+// .filter(obj => obj.value > 1)
+// .map(obj => obj.value);
+// console.log(myNumber);
+
+
+// reducing an array
+// const numbers = [1, -1, 2, 3];
+
+// let sum = 0;
+// for (let n of numbers)
+//     // sum = sum + n;
+// // same as above
+//     sum += n
+//     console.log(sum);
+
+// now use reduce method for same thing
+
+// const sum = numbers.reduce( (accumulator, currentValiue) =>{
+//     return accumulator + currentValiue
+// }, 0);
+// do it more simple
+// const sum = numbers.reduce( 
+//     (accumulator, currentValiue) => accumulator + currentValiue 
+// );
+// console.log(sum);
+
+// ex array from range
+
+//  const numbers = arrayRange(5, 10);
+
+//  function arrayRange(min, max) {
+//     const output = [];
+//     for (let i = min; i <= max; i++) {
+//         output.push(i);
+//     }
+//     console.log(output);
+    
+//  }
+
+// ex 2 includes the array
+
+// const numbers = [1, 2, 3, 4];
+
+// console.log(numbers.includes(1));
+// console.log(includ(numbers, 1));
+
+// function includ(array, searchElement) {
+//     for (let element of array) {
+//         if (element === searchElement) {
+//             return true
+//         }
+//     }
+//     return false 
+// }
+
+// ex 3 except
+// const numbers = [1, 2, 3, 4];
+// const output = except(numbers, [2,1]);
+// console.log(output);
+    
+// function except(array, excluded) {
+//     const output = [];
+//     for(let element of array)
+//         if(!excluded.includes(element))
+//             output.push(element);
+//     return output;
+// }
+
+// ex moving an element
+// const numbers = [1, 2, 3, 4];
+
+// const output = move(numbers, 3, 0);
+
+// console.log(output);
+
+// function move(array, index, offset) {
+//     const postion = index + offset
+//     if (postion >= array.length || postion < 0) {
+//         console.error('Invalif offset.');
+//         return;
+//     }
+//     else{
+//     const output = [...array];
+//     const element = output.splice(index, 1) [0]; 
+//     output.splice(postion, 0, element);
+//     return output     
+//     }
+// }
+
+// ex 5 count occurrences
+
+// const numbers = [1, 2, 3, 4, 1];
+
+// const count = countOccurrences(numbers, -1);
+
+// console.log(count);
+
+// function countOccurrences(array, searchElement) {
+// //    let count = 0;
+// //    for (let element of array) {
+// //     if (element === searchElement) {
+// //         count ++;  
+// //     }
+// //     return count
+// //    }  // here is old method now use reduced methof for this task
+// return array.reduce( (accumulator, current) => {
+
+//     const occurrences = (current === searchElement) ? 1 : 0;
+//     console.log(accumulator, current, searchElement);
+//     return accumulator + occurrences;
+// }, 0);
+// }
+
+// ex 6 Get Max
+
+// const numbers = [1, 2, 3, 4, 1];
+
+// const max = getMax([10, 2]);
+// console.log(max);
+
+// function getMax(array) {
+//     if (array.length === 0) return undefined;
+
+    // let max = array[1];
+
+    // for (let i = 0; i < array.length; i++) {
+    //     if (array[i] > max) {
+    //         max = array[i];
+    //     }
+    // }
+    // return max; // do more simple useing reduce method
+    // array.reduce( (a, b) =>{
+    //     // if (current > accumulator) return current;
+    //     // return accumulator;
+
+    //     // return (current > accumulator) ? current :accumulator;
+    //     return (a > b) ? a : b;
+    // });
+// } // do it more simple
+
+// function getMax(array) {
+//     if (array.length === 0) return undefined;
+//     return array.reduce((a, b) => (a, b) ? a : b); 
+
+// }
+
+
+// ex 7 Movies
+
+const movies = [
+    {
+        title: 'a',
+        years: 2018,
+        rating: 4.5
+    },
+    {
+        title: 'b',
+        years: 2018,
+        rating: 4.7
+    }, 
+    {
+        title: 'c',
+        years: 2018,
+        rating: 3
+    },
+    {
+        title: 'd',
+        years: 2017,
+        rating: 4.5
+    },
+];
+
+const titles =  movies
+.filter(m => m.years === 2018 && m.rating >= 4)
+.sort((a, b) => a.rating - b.rating)
+.reverse()
+.map(m => m.title)
+
+console.log(titles);
