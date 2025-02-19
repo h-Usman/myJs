@@ -1191,33 +1191,33 @@
 
 // ex 7 Movies
 
-const movies = [
-    {
-        title: 'a',
-        years: 2018,
-        rating: 4.5
-    },
-    {
-        title: 'b',
-        years: 2018,
-        rating: 4.7
-    }, 
-    {
-        title: 'c',
-        years: 2018,
-        rating: 3
-    },
-    {
-        title: 'd',
-        years: 2017,
-        rating: 4.5
-    },
-];
+// const movies = [
+//     {
+//         title: 'a',
+//         years: 2018,
+//         rating: 4.5
+//     },
+//     {
+//         title: 'b',
+//         years: 2018,
+//         rating: 4.7
+//     }, 
+//     {
+//         title: 'c',
+//         years: 2018,
+//         rating: 3
+//     },
+//     {
+//         title: 'd',
+//         years: 2017,
+//         rating: 4.5
+//     },
+// ];
 
-const titles =  movies
-.filter(m => m.years === 2018 && m.rating >= 4)
-.sort((a, b) => a.rating - b.rating)
-.reverse()
-.map(m => m.title)
+// const titles =  movies
+// .filter(m => m.years === 2018 && m.rating >= 4)
+// .sort((a, b) => a.rating - b.rating)
+// .reverse()
+// .map(m => m.title)
 
-console.log(titles);
+// console.log(titles);
