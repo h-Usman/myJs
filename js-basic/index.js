@@ -1221,3 +1221,73 @@
 // .map(m => m.title)
 
 // console.log(titles);
+
+
+// Functions
+// function declaration vs expression 
+// function walk1() { // function declaration
+//     console.log('Walk');
+// };
+
+// const walk = function Walk() { //named function exprection
+//     console.log('run');
+// };
+
+// const run = function() { // function exprection and anonomus function expression
+//     console.log('run');
+// };
+// run();  // call anonomus functions
+
+// let move = run;
+// move ();
+
+// hosting
+// walk1();
+// function walk1() { // function declaration
+//     console.log('Walk');
+// };
+// in ghe case of function erpression the function exprection call before functions expresion is hosting 
+// const run = function() { //named function exprection
+//     console.log('run');
+// };
+// run();
+
+// arguments
+// function sum(a, b) {
+//     console.log(arguments); // arguments will show what we have provide in arguments
+    // return a + b; // 1 + undefined = NaN
+    // now we can calculate the total argumets values or sum
+    // let total = 0;
+    // for (let value of arguments) 
+    //     total += value;
+    //     return total;
+    // return a + b; // 1 + undefined = NaN
+// };
+
+// console.log(sum(1, 2, 3, 4));
+// rest operators
+// function sum(discount, ...prices){ // jb hum rest operators user kty ha us k bad koi new operators ny add kr skty in funtion parameters
+
+//     // console.log(prices);
+//     const total = prices.reduce( (a, b) => a + b);
+//     return total * (1 - discount)
+// }
+
+// console.log(sum(0.1, 20, 30,));
+
+// default parameters
+
+// function intrest(principal, rate, years) {
+//     return principal * rate / 100 * years ;
+// }
+// console.log(intrest(100, 2, 5 ));
+
+// now using default parameters
+
+// function intrest(principal, years, rate = 3.5) {
+//     return principal * rate / 100 * years ;
+// }
+// console.log(intrest(10000, 5));
+
+// gatters and satters
+
