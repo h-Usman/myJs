@@ -1291,3 +1291,37 @@
 
 // gatters and satters
 
+const person ={
+    firstname: 'muhammad',
+    lastName: 'Usman',
+    // fullName: function (params) {} same like below
+    get fullName(){
+        return `${person.firstname} ${person.lastName}`
+    },
+    set fullName(value){
+        if (typeof value !== 'string') {
+            throw new Error('Value is not a string.');
+        }
+        const parts = value.split(' '); // split method use for get array data full and one by one words accodring to their index
+        if (parts.length !== 2) {
+            throw Error('Enter a first and last name.')
+        }
+        this.firstname = parts[0];
+        this.lastName = parts[1];
+        // console.log(parts);
+        
+        // this.firstname
+    }
+};
+try{
+
+person.fullName = '';
+}
+catch(e){
+ alert(e)
+}
+// now use getters and setters for menuplate or reassign for fullName() values
+// getters => access properties 
+// setters => change (mutate) them 
+console.log(person);
+ 
