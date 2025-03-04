@@ -1291,37 +1291,143 @@
 
 // gatters and satters
 
-const person ={
-    firstname: 'muhammad',
-    lastName: 'Usman',
-    // fullName: function (params) {} same like below
-    get fullName(){
-        return `${person.firstname} ${person.lastName}`
-    },
-    set fullName(value){
-        if (typeof value !== 'string') {
-            throw new Error('Value is not a string.');
-        }
-        const parts = value.split(' '); // split method use for get array data full and one by one words accodring to their index
-        if (parts.length !== 2) {
-            throw Error('Enter a first and last name.')
-        }
-        this.firstname = parts[0];
-        this.lastName = parts[1];
-        // console.log(parts);
+// const person ={
+//     firstname: 'muhammad',
+//     lastName: 'Usman',
+//     // fullName: function (params) {} same like below
+//     get fullName(){
+//         return `${person.firstname} ${person.lastName}`
+//     },
+//     set fullName(value){
+//         if (typeof value !== 'string') {
+//             throw new Error('Value is not a string.');
+//         }
+//         const parts = value.split(' '); // split method use for get array data full and one by one words accodring to their index
+//         if (parts.length !== 2) {
+//             throw Error('Enter a first and last name.')
+//         }
+//         this.firstname = parts[0];
+//         this.lastName = parts[1];
+//         // console.log(parts);
         
-        // this.firstname
-    }
-};
-try{
+//         // this.firstname
+//     }
+// };
+// try{
 
-person.fullName = '';
-}
-catch(e){
- alert(e)
-}
-// now use getters and setters for menuplate or reassign for fullName() values
-// getters => access properties 
-// setters => change (mutate) them 
-console.log(person);
+// person.fullName = '';
+// }
+// catch(e){
+//  alert(e)
+// }
+// // now use getters and setters for menuplate or reassign for fullName() values
+// // getters => access properties 
+// // setters => change (mutate) them 
+// console.log(person);
+ // local vs global scope
+
+//  const color = 'red';
+
+//  function start() {
+//     const message = 'hi';
+//     const color = 'blue';
+//     console.log(color);
+//  }
+
+//  function stop() {
+//     const message = 'bye';
+//  }
+//  console.log(color);
  
+//  start ();
+
+// let vs var
+
+// function start() {
+//     for (let i =0; i < 5; i++){
+//         console.log(i);
+//     }
+// }
+
+// start();
+
+// this keyword
+// const video = {
+//     title: 'a',
+//     play() {
+//         console.log(this); 
+//     }
+// };
+
+// video.stop = function() {
+//     console.log(this);
+    
+// }
+
+// function Video(title) {
+//     this.title = title;
+//     console.log(this);
+// }
+// Video('a');
+// video.play();
+// console.log(this);
+// const v = new Video('a') //when use new 'create an empty object'   {}
+// video.stop();
+
+// const v = new Video('b')
+
+// const video = {
+//     title: 'a',
+//     tags: ['a', 'b', 'c'],
+//     showTangs(){
+//         this.tags.forEach(function(tag) {
+//             console.log(this.title,tag);
+//         }, this)
+//     }
+// };
+// video.showTangs();
+
+// chanigng this
+// solutions 1
+// const video = {
+//     title: 'a',
+//     tags: ['a', 'b', 'c'],
+//     showTangs(){
+//         const self = this;
+//         // console.log(self);
+        
+//         this.tags.forEach(function(tag) {
+//             console.log(self.title,tag);
+//         }) // remove this 
+//     }
+// };
+// video.showTangs();
+
+// solution 2
+// function playVideo() {
+//     console.log(this);
+// }
+
+// playVideo.call({name: 'usman'});
+// solution 3
+// const video = {
+//     title: 'a',
+//     tags: ['a', 'b', 'c'],
+//     showTangs(){
+//         this.tags.forEach(function(tag) {
+//             console.log(this.title,tag);
+//         }.bind(this)) // solution 3
+//     }
+// };
+// video.showTangs();
+// change into arrow function
+// const video = {
+//     title: 'a',
+//     tags: ['a', 'b', 'c'],
+//     showTangs(){
+//         this.tags.forEach(tag => {
+//             console.log(this.title,tag);
+//         }) // solution 3
+//     }
+// };
+// video.showTangs();
